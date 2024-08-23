@@ -1,13 +1,146 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
 
-  
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="8" size-xl="6">
+      <ion-row>
+        <ion-col size="12" size-lg="4">
+          <img src="{{ this.Pessoa.img }}" class="c">
+        </ion-col>
+        <ion-col size="12" size-lg="8">
+          <ion-item>
+            <h2 class="titulo-nome">{{ this.Pessoa.nome }}</h2>
+          </ion-item>
+          <ion-item>
+            <h3 class="titulo-funcao">{{ this.Pessoa.Proficao }}</h3>
+          </ion-item>
+          <ion-item>
+            <h3 class="titulo-funcao">{{ this.Pessoa.mencao }}</h3>
+          </ion-item>
+          <ion-item>
+          <h3 class="titulo-funcao">{{ this.Pessoa.lingua }}</h3>
+          </ion-item>
+          <ion-item>
+          <h3 class="titulo-funcao">{{ this.Pessoa.local }}</h3>
+          </ion-item>
+          <ion-item>
+          <h3 class="titulo-funcao">{{ this.Pessoa.desc }}</h3>
+          </ion-item>
+        </ion-col>
+      </ion-row>
 
-</ion-content>
+        <!-- bio -->
+
+      <ion-row>
+        <ion-col size="4" class="ion-text-left">
+          <h3>Biografia</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <p>{{ Pessoa.bio }}</p>
+        </ion-col>
+      </ion-row>
+
+      <!-- end-bio -->
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <!-- status -->
+
+      <ion-row>
+
+        <ion-col size="4" class="ion-text-center a">
+          <ion-item>
+            <h3>{{ Pessoa.curtidas }}</h3>
+          </ion-item>
+          <ion-item>
+            <h4>Curtidas</h4>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="4" class="ion-text-center a">
+          <ion-item>
+            <h3>{{ Pessoa.seguindo }}</h3>
+          </ion-item>
+          <ion-item>
+            <h4>Seguindo</h4>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="4" class="ion-text-center a">
+          <ion-item >
+            <h3>{{ Pessoa.amigos }}</h3>
+          </ion-item>
+          <ion-item>
+            <h4>Amigos</h4>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+
+      <!-- end-status -->
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <!-- postagem dos amigos -->
+
+      <ion-row>
+        <ion-col size="4" class="ion-text-left">
+          <h3>Postagens de Amigos</h3>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="2">
+          <img class="c" src="{{comentario.img}}" alt="">
+        </ion-col>
+        <ion-col size="10">
+          <ion-row> <h3>{{comentario.Nome}}  <span class="b">{{comentario.Mencao}}</span></h3></ion-row>
+          <ion-row>{{comentario.U}}</ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="2">
+          <img class="c" src="{{comentario.img}}" alt="">
+        </ion-col>
+        <ion-col size="10">
+          <ion-row> <h3>{{comentario.Nome}}  <span class="b">{{comentario.Mencao}}</span></h3></ion-row>
+          <ion-row>{{comentario.A}}</ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="11">
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="2">
+          <img class="c" src="{{comentario.img}}" alt="">
+        </ion-col>
+        <ion-col size="10">
+          <ion-row> <h3>{{comentario.Nome}}  <span class="b">{{comentario.Mencao}}</span></h3></ion-row>
+          <ion-row>{{comentario.B}}</ion-row>
+        </ion-col>
+      </ion-row>
+    
+    </ion-col>
+  </ion-row>
+
+
