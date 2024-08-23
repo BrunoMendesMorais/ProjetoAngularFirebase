@@ -9,8 +9,7 @@ import { MessageService } from '../services/message.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-  styleUrls: ['home.page.scss'],
-})
+
 export class HomePage {
   // variaveis
   pessoa = {
@@ -48,4 +47,4 @@ export class HomePage {
   constructor(){ }
 }
 
-  }
+
