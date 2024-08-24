@@ -1,0 +1,27 @@
+.on-mouse{
+    cursor:pointer;
+
+    & h2, 
+    & h3{
+        color:red;    
+        transition: all 1s;  
+    }
+    & h2{
+        letter-spacing: none;
+        transition:all 1s;
+    }
+}
+
+.on-mouse:hover{
+    cursor:pointer;
+
+    & h2, 
+    & h3{
+        color:rgb(28, 255, 21);
+        transition: all 1s; 
+    }
+    & h2{
+        letter-spacing: none;
+        transition:all 1s;
+    }
+}
