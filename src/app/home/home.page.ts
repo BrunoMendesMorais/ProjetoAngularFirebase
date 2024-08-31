@@ -4,6 +4,8 @@ import { CrudService } from '../services/crud.service';
 import { Storage, getDownloadURL, ref, uploadBytesResumable } from '@angular/fire/storage';
 import { MessageService } from '../services/message.service';
 import { triggerAsyncId } from 'async_hooks';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -15,7 +17,7 @@ export class HomePage {
   paises: any;
   isLoading: boolean = false;
 
-  constructor(){
+  constructor(private router : Router){
     this.getPaisCode();
   }
   getPaisCode(){
@@ -30,5 +32,9 @@ export class HomePage {
     .catch( erro => {console.log(erro)})
     .finally( () => this.isLoading = false )
   }
-
+  verDetalhes(ccn3: string){
+    this.router.navigate(['/detalhe-pais'],{
+      state:{codigo:ccn3}
+    });
+  }
 }
