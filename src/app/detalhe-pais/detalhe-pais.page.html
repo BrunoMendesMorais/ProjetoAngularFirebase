@@ -1,14 +1,56 @@
-<ion-content [fullscreen]="true">
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>detalhe-pais</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
 
-  <ion-row class="ion-justify-content-center">
-      <ion-col size="12" size-lg="8">
+    <ng-container *ngFor="let pais of this.paises">
 
         <ion-row class="ion-justify-content-center">
-          
-          <ion-col size="12" size-lg="4">
+            <ion-col size="6">
+                <ion-row>
+                    <ion-col size="3">
+                         <img src="{{pais.flags.png}}" height="100px" alt="">
+                    </ion-col>
+                    <ion-col size="4">
+                        <h1>{{ pais.name.common }}</h1>
+                        {{pais.name.official}}
+                    </ion-col>
+                </ion-row>
+                <ng-container *ngFor="let capital of pais.capital">
+                    <ion-item>  Capital: {{capital}} </ion-item>
+                </ng-container>
+                <ion-item>População:{{pais.population}}</ion-item>
+                    <ion-item>Area: {{pais.area}}</ion-item>
+                    <ion-item>Região: {{pais.region}}</ion-item>
+                    <ion-item>Sub-região: {{pais.subregion}}</ion-item>
+                    <br>
+                    <h4>Fusos Horarios:</h4>
+                <ng-container *ngFor="let time of pais.timezones">
+                    <ion-item>
+                        {{ time }}
+                    </ion-item>
+                </ng-container>
+                <ion-item *ngIf="this.pais.independent== true">
+                    {{ pais.name.common }} é um pais idependente
+                </ion-item>
+                <ion-item *ngIf="this.pais.independent== false">
+                    {{ pais.name.common }} não é um pais idependente
+                </ion-item>
+                <h4>paises que fazem fronteira</h4>
+                <ng-container *ngFor="let fronteira of pais.borders">
+                    <ion-item>
+                        {{ fronteira }}
+                    </ion-item>
+                </ng-container>
 
-          </ion-col></ion-row>
+            </ion-col>
+        </ion-row>
 
-      </ion-col>
-  </ion-row>
-</ion-content>
+        <ion-row></ion-row>
+
+    </ng-container>
+    
+  </ion-content>
