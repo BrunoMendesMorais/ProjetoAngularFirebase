@@ -7,6 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleryComponent  implements OnInit {
 
+  // treinos = [
+  //   {
+  //     titulo: 'braço',
+  //     fotos: [
+  //       {url: ''},
+  //       {url: ''},
+  //       {url: ''},
+  //       {url: ''},
+  //     ]
+  //   },
+  //   {
+  //     titulo: 'peito',
+  //     fotos: [
+  //       {url: ''},
+  //       {url: ''},
+  //       {url: ''},
+  //       {url: ''},
+  //     ]
+  //   },
+  // ]
+
   constructor() { }
 
   ngOnInit() {}

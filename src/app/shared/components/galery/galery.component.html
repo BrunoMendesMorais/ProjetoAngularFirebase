@@ -1,10 +1,12 @@
-<ion-content>
-  <ion-row class="ion-text-center">
+<ion-row class="ion-text-center">
+  <ion-col>
       <H1>TREINOS</H1>
+    </ion-col>
   </ion-row>
   <ion-row>
+
     <ion-col class="ion-text-center">
-      <h3>Braco</h3>
+      <h3>Braço</h3>
       <ion-card >
         <ion-card-content> <img src="https://www.mundoboaforma.com.br/wp-content/uploads/2021/07/triceps-no-pulley-atras-ca-cabeca.gif" alt=""> </ion-card-content>
       </ion-card>
@@ -12,6 +14,8 @@
         <ion-card-content> <img src="https://www.mundoboaforma.com.br/wp-content/uploads/2021/07/triceps-no-pulley-atras-ca-cabeca.gif" alt=""> </ion-card-content>
       </ion-card>
     </ion-col>
+
+    
     <ion-col class="ion-text-center">
       <h3>Peito</h3>
       <ion-card >
@@ -40,5 +44,11 @@
       </ion-card>
     </ion-col>
   </ion-row>
-</ion-content>
 
+
+<!-- <ng-container *ngFor="let treino of this.treinos">
+  <h1>{{ treino.titulo }}</h1>
+  <ng-container *ngFor="let foto of treino.fotos">
+    <img src="{{ foto.url }}" alt="">
+  </ng-container>
+</ng-container> -->
